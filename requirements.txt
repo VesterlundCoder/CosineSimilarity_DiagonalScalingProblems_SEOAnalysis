@@ -1,0 +1,16 @@
+requests
+beautifulsoup4
+lxml
+trafilatura
+sentence-transformers
+torch
+scikit-learn
+pandas
+tqdm
+numpy
+sympy
+mpmath
+stable-baselines3
+gymnasium
+scipy
+rbo

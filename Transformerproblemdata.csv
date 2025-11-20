@@ -1,0 +1,40 @@
+Case,Problem_Type,Metric,Original_Value,Transformed_Value,Difference,Text_A,Text_B,Domain_A,Domain_B,Similarity_Score,Notes
+Case_2,Paraphrase_Sensitivity,Pairwise_Cosine,0.6485,0.6107,0.0377,"Safety fences reduce the risk of worker injury around machines.","Protective barriers shield employees from accidents near industrial robots.",Safety,Safety,0.6485,Original pair
+Case_2,Paraphrase_Sensitivity,Pairwise_Cosine,0.6485,0.6107,0.0377,"By installing safety fences around machines, the risk of worker injury is reduced.","Employees are protected from accidents around industrial robots by protective barriers.",Safety,Safety,0.6107,Paraphrased pair
+Case_2,Paraphrase_Sensitivity,Jaccard_Overlap_A1,1.000,1.000,0.000,"Safety fences reduce the risk of worker injury around machines.","By installing safety fences around machines, the risk of worker injury is reduced.",Safety,Safety,1.000,Perfect neighbor overlap
+Case_2,Paraphrase_Sensitivity,Jaccard_Overlap_A2,0.818,0.818,0.000,"Protective barriers shield employees from accidents near industrial robots.","Employees are protected from accidents around industrial robots by protective barriers.",Safety,Safety,0.818,Significant neighbor change
+Case_2,Paraphrase_Sensitivity,RBO_Score_A1,0.949,0.949,0.000,"Safety fences reduce the risk of worker injury around machines.","By installing safety fences around machines, the risk of worker injury is reduced.",Safety,Safety,0.949,High ranking similarity
+Case_2,Paraphrase_Sensitivity,RBO_Score_A2,0.990,0.990,0.000,"Protective barriers shield employees from accidents near industrial robots.","Employees are protected from accidents around industrial robots by protective barriers.",Safety,Safety,0.990,Very high ranking similarity
+Case_2,Paraphrase_Sensitivity,Neighbor_Rank_1,1.000,0.947,-0.053,"Safety fences reduce the risk of worker injury around machines.","Safety fences reduce the risk of worker injury around machines.",Safety,Safety,1.000,Top neighbor similarity change
+Case_2,Paraphrase_Sensitivity,Neighbor_Rank_2,0.578,0.529,-0.049,"Protective barriers around robot cells prevent accidents.","Protective barriers around robot cells prevent accidents.",Safety,Safety,0.578,Second neighbor similarity change
+Case_2,Paraphrase_Sensitivity,Neighbor_Rank_5,0.271,0.250,-0.021,"CE marking indicates conformity with health and safety standards.","Regular exercise reduces the risk of cardiovascular disease.",Safety,Health,0.271,Domain shift in 5th neighbor
+Case_4,Cosine_Ambiguity,Identical_Cosine,0.0642,0.0642,0.0000,automobile,"An eagle soared over the valley.",Transport,Nature,0.0642,Example 1 - Different domains same cosine
+Case_4,Cosine_Ambiguity,Identical_Cosine,0.0642,0.0642,0.0000,couch,"A sparrow perched on the fence.",Furniture,Nature,0.0642,Example 1 - Different domains same cosine
+Case_4,Cosine_Ambiguity,Identical_Cosine,0.0015,0.0015,0.0000,couch,"The dog barked at the mailman.",Furniture,Animals,0.0015,Example 2 - Very low similarity
+Case_4,Cosine_Ambiguity,Identical_Cosine,0.0015,0.0015,0.0000,"He tightened the screw with a screwdriver.","The physician assessed the symptoms.",Tools,Medical,0.0015,Example 2 - Very low similarity
+Case_4,Cosine_Ambiguity,Identical_Cosine,0.0448,0.0448,0.0000,"An eagle soared over the valley.","The automobile was parked in the garage.",Nature,Transport,0.0448,Example 3 - Medium-low similarity
+Case_4,Cosine_Ambiguity,Identical_Cosine,0.0448,0.0448,0.0000,"The physician assessed the symptoms.","He was joyful during the celebration.",Medical,Emotion,0.0448,Example 3 - Medium-low similarity
+Case_4,Cosine_Ambiguity,Lexical_Overlap,0.000,0.000,0.000,automobile,"An eagle soared over the valley.",Transport,Nature,0.000,No shared words
+Case_4,Cosine_Ambiguity,Lexical_Overlap,0.100,0.100,0.000,"He tightened the screw with a screwdriver.","The physician assessed the symptoms.",Tools,Medical,0.100,Minimal word overlap
+Case_4,Cosine_Ambiguity,Lexical_Overlap,0.111,0.111,0.000,"The physician assessed the symptoms.","He was joyful during the celebration.",Medical,Emotion,0.111,Low word overlap
+Case_4,Cosine_Ambiguity,Total_Pairs_Found,7307,7307,0,Multiple_Pairs,Multiple_Pairs,Various,Various,Various,Total similar pairs identified
+Case_6,Transformation_Instability,Query_Doc_Preserved,TRUE,TRUE,0,"what are machine safety fences used for","Safety fences reduce the risk of worker injury around machines.",Query,Safety,0.814,Perfect ranking preservation
+Case_6,Transformation_Instability,Query_Doc_Preserved,TRUE,TRUE,0,"how to protect employees near industrial robots","Safety fences reduce the risk of worker injury around machines.",Query,Safety,0.547,Perfect ranking preservation
+Case_6,Transformation_Instability,Query_Doc_Preserved,TRUE,TRUE,0,"financial earnings and market performance","Quarterly earnings exceeded analyst expectations this season.",Query,Finance,0.498,Perfect ranking preservation
+Case_6,Transformation_Instability,Query_Doc_Preserved,TRUE,TRUE,0,"vector search and semantic similarity","Vector databases accelerate semantic search over large corpora.",Query,AI,0.732,Perfect ranking preservation
+Case_6,Transformation_Instability,Top_K_Overlap,8,8,0,Query_1_Results,Query_1_Results,Query,Various,1.000,Perfect overlap all queries
+Case_6,Transformation_Instability,Top_K_Overlap,8,8,0,Query_2_Results,Query_2_Results,Query,Various,1.000,Perfect overlap all queries
+Case_6,Transformation_Instability,Top_K_Overlap,8,8,0,Query_3_Results,Query_3_Results,Query,Various,1.000,Perfect overlap all queries
+Case_6,Transformation_Instability,Top_K_Overlap,8,8,0,Query_4_Results,Query_4_Results,Query,Various,1.000,Perfect overlap all queries
+Case_6,Transformation_Instability,Frobenius_Norm,0.1687,0.1687,0.000,Document_Matrix,Document_Matrix,Various,Various,0.1687,Doc-doc cosine change magnitude
+Case_6,Transformation_Instability,Max_Cosine_Change,0.0426,0.0426,0.000,Document_Pair,Document_Pair,Various,Various,0.0426,Maximum individual cosine change
+Case_6,Transformation_Instability,Mean_Cosine_Change,0.0166,0.0166,0.000,Document_Matrix,Document_Matrix,Various,Various,0.0166,Average cosine change
+Case_6,Transformation_Instability,Scaling_Range_Min,0.673,0.673,0.000,Embedding_Dimension,Embedding_Dimension,Mathematical,Mathematical,0.673,Minimum scaling factor
+Case_6,Transformation_Instability,Scaling_Range_Max,1.480,1.480,0.000,Embedding_Dimension,Embedding_Dimension,Mathematical,Mathematical,1.480,Maximum scaling factor
+Case_6,Transformation_Instability,Embedding_Dimension,384,384,0,Model_Architecture,Model_Architecture,Technical,Technical,384,all-MiniLM-L6-v2 dimension
+Summary,Overall_Analysis,Total_Cases,3,3,0,All_Cases,All_Cases,Multiple,Multiple,3,Three problem areas identified
+Summary,Overall_Analysis,Corpus_Size,31,31,0,Multi_Domain_Corpus,Multi_Domain_Corpus,Various,Various,31,Documents across 6 domains
+Summary,Overall_Analysis,Model_Used,all-MiniLM-L6-v2,all-MiniLM-L6-v2,0,sentence-transformers,sentence-transformers,Technical,Technical,1,Primary model for analysis
+Summary,Overall_Analysis,Random_Seed,42,42,0,Reproducibility,Reproducibility,Technical,Technical,42,For experimental reproducibility
+Summary,Overall_Analysis,Top_K_Neighbors,10,10,0,Neighbor_Analysis,Neighbor_Analysis,Technical,Technical,10,Standard neighbor count
+Summary,Overall_Analysis,Cosine_Tolerance,0.02,0.02,0.000,Similarity_Matching,Similarity_Matching,Technical,Technical,0.02,Tolerance for same cosine detection
